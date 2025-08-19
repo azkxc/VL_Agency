@@ -1,0 +1,60 @@
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+.logo {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.main-header {
+    background-color: #e28888;
+    padding: 40px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.main-header *{
+    display: inline-block;
+}
+
+.logo {
+    position: absolute;
+    left: 8%;
+}
+
+.logo-description {
+    position: absolute;
+    left: 12%;
+}
+
+.logo-description > .VL {
+    color: #e2b552;
+    font-weight: bold;
+}
+
+.navigation {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+}
+
+.navigation li:not(:last-child) {
+    padding-right: 10px;
+}
+
+.navigation a:hover {
+    color: red;
+}
+
+.button {
+    position: absolute;
+    right: 8%;
+}
