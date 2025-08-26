@@ -1,3 +1,27 @@
+/* html*/
+
+body {
+    background-color: #000000;
+    margin: 0;
+    width: 100vw;
+    font-family: "Montserrat";
+    color:#FFFFFF;
+}
+
+.button {
+    color: #000000;
+    background: linear-gradient(to right, #FFD900, #FB9300);
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+span.text-gradient {
+    color: transparent;
+    background: linear-gradient(to right, #FFD900, #FB9300);
+    background-clip: text;
+}
+
 a:link {
   color: #FFFFFF;
   text-decoration: none;
@@ -8,62 +32,66 @@ a:visited {
   text-decoration: none;
 }
 
-body {
-    background-color: #111111;
-}
+/* header*/
 
-/* Header style*/
-
-.logo {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-}
-
-.main-header {
-    background-color: #2b2828;
-    padding: 40px 0px;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: rgba(105, 102, 102, 0.2);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 40px 0px 35px;
     display: flex;
     align-items: center;
     margin: -10px;
 }
 
-.main-header *{
-    display: inline-block;
+header *{
+    display: inline-block;;
 }
 
-.logo {
+header .logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
     position: absolute;
-    left: 8%;
+    left: 10%;
 }
 
-.logo-description {
+header .logo-description {
     position: absolute;
-    left: 12%;
+    left: 15%;
+    font-size: 1.1em;
+    color: rgb(150, 147, 147);
 }
 
-.logo-description > .VL {
-    color: #e2b552;
+header .logo-description span {
     font-weight: bold;
 }
 
-.navigation {
+header .navigation {
     position: absolute;
     left: 50%;
     translate: -50%;
+    font-size: 0.8em;
 }
 
-.navigation li:not(:last-child) {
+header .navigation li:not(:last-child) {
     padding-right: 10px;
 }
 
-.navigation a {
-    
+header .button {
+    position: absolute;
+    right: 8%;
 }
 
-/* WHat is thi, lol*/
+/* WHat is this, lol*/
 /* idk how animate text color and underline at the same time*/
 
+/*begin*/
 .navigation a::before {
     content: "";
     position: absolute;
@@ -90,44 +118,137 @@ body {
 
 .navigation a:hover::before {
     transform: scaleX(1);
+} /* end*/
+
+
+
+
+
+/* short-bio */
+
+.short-bio {
+    display: block;
+    background-color: #000000;
+    margin-top: 80px;
 }
 
-.button {
-    position: absolute;
-    right: 8%;
-    color: #000000;
-    background: linear-gradient(to right, #FFD900, #FB9300);
-    border: 0;
-    border-radius: 5px;
-    padding: 5px 10px;
+.short-bio ul {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    translate: -50%;
 }
 
-/* begin styling */
-
-.begin {
-    background-color: #FFFFFF;
-}
-.begin li {
+.short-bio ul.stats-1 li {
     display: inline-block;
     border: 2px solid transparent;
     border-radius: 30px;
     padding: 5px 10px;
     background:
-        linear-gradient(white, white) padding-box,
+        linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 0, 0)) padding-box,
         linear-gradient(to right, #FFD900, #FB9300) border-box;
     background-origin: border-box;
     background-clip: padding-box, border-box;
 }
 
-.begin ul {
+.short-bio p.title {
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+}
+.short-bio p.about-me {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0% 20%;
+    position: relative;
+    bottom: 30px;
+}
+
+.short-bio .navigation {
     display: inline-block;
-    position: absolute;
+    position: relative;
     left: 50%;
     translate: -50%;
 }
 
-.begin span {
-    color: transparent;
-    background: linear-gradient(to right, #FFD900, #FB9300);
-    background-clip: text;
+.short-bio button {
+    margin-right: 10px;
+    font-weight: bold;
+    padding: 13px 20px;
+}
+
+.short-bio a {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: 1px solid #FFD900;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.short-bio ul.stats-2 li {
+    display: inline-block;
+    text-align: center;
+}
+
+.short-bio ul.stats-2 li:not(:last-child) {
+    padding-right: 120px;
+}
+
+.short-bio ul.stats-2 li span {
+    font-size: 3em;
+}
+
+/* my-services */
+
+.my-services {
+    padding-top: 100px;
+}
+
+.my-services > p.title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 100vw;
+    margin-bottom: 0;
+}
+
+.my-services > p.description {
+    text-align: center;
+    font-size: 1.3em;
+    width: 100vw;
+    margin-top: 10px;
+}
+
+.my-services > ul {
+    list-style-type: none;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.my-services .services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+}
+
+.my-services .service {
+    padding: 15px;
+    border: 2px solid #857f7f;
+    border-radius: 20px;
+    width: 30vw;
+    background-color: #363636;
+}
+
+.my-services .service:hover {
+    border-color: #c5a801a2;
+    transition: all 0.5s;
+}
+
+.my-services .service:nth-child(odd) {
+    justify-self: end;
+}
+
+.my-services .service:nth-child(even) {
+    align-items: start;
 }
