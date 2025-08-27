@@ -1,11 +1,17 @@
 /* html*/
 
 body {
-    background-color: #000000;
+    overflow-x: hidden;
     margin: 0;
-    width: 100vw;
-    font-family: "Montserrat";
+    width: 100%;
+    font-family: "Inter";
     color:#FFFFFF;
+    background:
+        linear-gradient(rgb(241, 185, 31), transparent 0.6px), 
+        linear-gradient(90deg, rgb(241, 185, 31), transparent 0.6px),
+        #0A0A0A;
+    background-size: 60px 60px;
+    background-position: center;
 }
 
 .button {
@@ -88,10 +94,9 @@ header .button {
     right: 8%;
 }
 
-/* WHat is this, lol*/
-/* idk how animate text color and underline at the same time*/
+/* WHat is this, lol
+idk how animate text color and underline at the same time
 
-/*begin*/
 .navigation a::before {
     content: "";
     position: absolute;
@@ -110,15 +115,15 @@ header .button {
     color: transparent;
     background: rgb(230, 183, 55);
     background-clip: text;
-    /*text-decoration: underline;
+    text-decoration: underline;
     text-underline-offset: 5px;
-    text-decoration-color: rgb(230, 183, 55);*/
+    text-decoration-color: rgb(230, 183, 55);
     transition: all 1s;
 }
 
 .navigation a:hover::before {
     transform: scaleX(1);
-} /* end*/
+} */
 
 
 
@@ -128,27 +133,13 @@ header .button {
 
 .short-bio {
     display: block;
-    background-color: #000000;
-    margin-top: 80px;
-}
-
-.short-bio ul {
-    display: inline-block;
-    position: relative;
-    left: 50%;
-    translate: -50%;
-}
-
-.short-bio ul.stats-1 li {
-    display: inline-block;
-    border: 2px solid transparent;
-    border-radius: 30px;
-    padding: 5px 10px;
+    padding: 100px 0;
     background:
-        linear-gradient(rgba(255, 255, 0, 0), rgba(255, 255, 0, 0)) padding-box,
-        linear-gradient(to right, #FFD900, #FB9300) border-box;
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+        linear-gradient(rgb(241, 185, 31), transparent 0.6px), 
+        linear-gradient(90deg, rgb(241, 185, 31), transparent 0.6px),
+        linear-gradient(to left top, #0A0A0A, #222222, #0A0A0A);
+    background-size: 60px 60px, 60px 60px, 100%;
+    background-position: center;
 }
 
 .short-bio p.title {
@@ -185,16 +176,24 @@ header .button {
     font-weight: bold;
 }
 
-.short-bio ul.stats-2 li {
+.short-bio ul {
     display: inline-block;
-    text-align: center;
+    position: relative;
+    left: 50%;
+    translate: -50%;
 }
 
-.short-bio ul.stats-2 li:not(:last-child) {
+.short-bio ul li {
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+}
+
+.short-bio ul li:not(:last-child) {
     padding-right: 120px;
 }
 
-.short-bio ul.stats-2 li span {
+.short-bio ul li span {
     font-size: 3em;
 }
 
